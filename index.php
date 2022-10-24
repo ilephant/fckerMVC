@@ -9,17 +9,17 @@ define( '__ROOT__', dirname( __FILE__ ) . '/' );
 require_once( __ROOT__ . 'framework/Psr4AutoloaderClass.php' );
 
 // instantiate the loader
-$loader = new Premade\Framework\Psr4AutoloaderClass;
+$loader = new Fcker\Framework\Psr4AutoloaderClass;
 
 // register the autoloader
 $loader->register();
 
 // register the base directories for the namespace prefix
-$loader->addNamespace('Premade\Framework', __ROOT__ . 'framework/');
-$loader->addNamespace('Premade\Application', __ROOT__ . 'application/');
+$loader->addNamespace('Fcker\Framework', __ROOT__ . 'framework/');
+$loader->addNamespace('Fcker\Application', __ROOT__ . 'application/');
 
-use Premade\Framework\Core\Router;
-use Premade\Framework\Core\Request;
+use Fcker\Framework\Core\Router;
+use Fcker\Framework\Core\Request;
 
 try {
     $router = Router::getInstance();
